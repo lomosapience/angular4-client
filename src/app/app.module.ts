@@ -3,20 +3,21 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
-import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { ClickerComponent } from './components/clicker/clicker.component';
+import {ClickerService} from './services/clicker.service';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ClickerComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule,
-    AppRoutingModule
+    HttpModule
   ],
-  providers: [],
+  providers: [ ClickerService ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
